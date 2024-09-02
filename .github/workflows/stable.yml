@@ -16,5 +16,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.TOKENGH }}
           registry: ghcr.io
-          repository: ghcr.io/trad3r/rebrain_k8s
+          repository: ghcr.io/trad3r/rebrain_k8s/webinar
           tag_with_ref: true
