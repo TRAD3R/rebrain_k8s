@@ -1,0 +1,20 @@
+name: Stable version build
+on:
+  push:
+    branches: [master,webinar]
+
+jobs:
+  push_to_registry:
+    name: Push to docker actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out the repo
+        uses: actions/checkout@v2
+      - name: push to repo
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.TOKENGH }}
+          registry: ghcr.io
+          repository: ghcr.io/trad3r/rebrain_k8s
+          tag_with_ref: true
