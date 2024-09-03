@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rebrain-k8s
+spec:
+  containers:
+    - name: rebrain-k8s
+      image: trad3r/rebrain_k8s
+      imagePullPolicy: Always
+  imagePullSecrets:
+    - name: rk
